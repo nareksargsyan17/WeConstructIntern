@@ -1,0 +1,923 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui;
+}
+
+main {
+    height: 100vh;
+    background-image: url("img/offices.jpg");
+    background-size: cover;
+}
+
+header {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    margin: auto auto;
+}
+
+#menu-ic {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+
+header > h2 {
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+header > h2:hover {
+    transform: scale(1.04);
+}
+
+.main-menu > li {
+    margin-right: 40px;
+}
+
+.main-menu > li:last-child {
+    margin-right: 0;
+}
+
+.main-menu > li > a {
+    color: #ece9e9;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.main-menu > li > a:hover {
+    color: #ffffff;
+}
+
+.main-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-info {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mini-info {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mini-info > p {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    padding: 12px 40px;
+    border-radius: 20px;
+    background-color: #10b5ff;
+    color: white;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    background-color: #04a9f5
+}
+
+
+.title {
+    font-size: 40px;
+    margin: 80px 0;
+    color: #10b5ff;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#about-oneder {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin: 0 auto;
+}
+
+#about-oneder > img {
+    width: 50%;
+}
+
+#team-info {
+    text-align: center;
+    font-size: 20px;
+    color: #363636;
+    margin: auto auto;
+    width: 50%;
+}
+
+.oneder-text > h5 {
+    font-size: 30px;
+}
+
+.oneder-text > * {
+    margin-top: 10px;
+}
+
+.checks {
+    display: flex;
+    align-items: center;
+}
+
+.checks > img {
+    width: 16px;
+    margin: 10px;
+}
+
+#team-box {
+    width: 60%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 30px;
+}
+
+.staff-card {
+    width: 100%;
+}
+
+.staff-card > img {
+    width: 100%;
+}
+
+.staff-card > p {
+    margin-left: 10px;
+}
+
+.staff-card > h5 {
+    margin-left: 10px;
+}
+
+.staff-card > p {
+    font-size: 12px;
+    color: #9a9a9a;
+}
+
+.row {
+    border: 1px solid #9a9a9a;
+    margin: 50px auto;
+}
+
+.portfolio-menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px auto;
+}
+
+.portfolio-menu > .btn {
+    padding: 10px 30px;
+    background-color: rgba(208, 207, 207, 0.62);
+    color: black;
+    transition: all 0.5s;
+}
+
+.portfolio-menu > .btn:first-child {
+    background-color: #10b5ff;
+    color: white;
+}
+
+.portfolio-menu > .btn:hover {
+    opacity: 70%;
+}
+
+.crazy-photos {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 30px;
+    margin: auto auto;
+    width: 60%;
+}
+
+.crazy-photos > div {
+    background-image: url("img/design.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+}
+
+.crazy-photos > .photo1 {
+    grid-area: 1 / 1 / span 9 /span 1;
+}
+
+.crazy-photos > .photo2 {
+    grid-area: 1 / 2 / span 10 /span 1;
+}
+
+.crazy-photos > .photo3 {
+    grid-area: 1 / 3 / span 11 /span 1;
+}
+
+.crazy-photos > .photo4 {
+    grid-area: 1 / 4 / span 10 /span 1;
+}
+
+.crazy-photos > .photo5 {
+    grid-area: 10 / 1 / span 13 /span 1;
+}
+
+.crazy-photos > .photo6 {
+    grid-area: 11 / 2 / span 11 /span 1;
+}
+
+.crazy-photos > .photo7 {
+    grid-area: 12 / 3 / span 6 /span 1;
+}
+
+.crazy-photos > .photo8 {
+    grid-area: 11 / 4 / span 6 /span 1;
+}
+
+.crazy-photos > .photo9 {
+    grid-area: 23 / 1 / span 10 /span 1;
+}
+
+.crazy-photos > .photo10 {
+    grid-area: 22 / 2 / span 6 /span 1;
+}
+
+.crazy-photos > .photo11 {
+    grid-area: 18 / 3 / span 6 /span 1;
+}
+
+.crazy-photos > .photo12 {
+    grid-area: 17 / 4 / span 12 /span 1;
+}
+
+.crazy-photos > .photo13 {
+    grid-area: 24 / 3 / span 6 /span 1;
+}
+
+#our-services {
+    margin: 50px 0;
+    padding: 20px 0 60px 0;
+    background-color: rgba(237, 237, 255, 0.39)
+}
+
+#our-services > div {
+    width: 60%;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px
+}
+
+.service-box > * {
+    margin-top: 10px;
+}
+
+.service-box > img {
+    width: 26px;
+}
+
+.service-box > h5 {
+    font-size: 14px;
+    color: rgba(64, 64, 64, 0.715)
+}
+
+.service-box > p {
+    font-size: 10px;
+    margin: 0;
+    color: rgba(62, 62, 62, 0.628)
+}
+
+.service-box > span {
+    font-size: 12px;
+    color: rgb(48, 142, 250);
+    cursor: pointer;
+}
+
+#testimonials-box {
+    width: 30%;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    color: rgba(50, 49, 49, 0.633)
+}
+
+#testimonials-box > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#testimonials-box > div > img {
+    width: 32px;
+    border-radius: 50%
+}
+
+#pricing {
+    background-color: rgba(237, 237, 255, 0.39);
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+#pricing-items {
+    width: 60%;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+.pricing-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 15px 30px;
+}
+
+.pricing-box > h3 {
+    font-size: 20px;
+    color: rgba(50, 49, 49, 0.633)
+}
+
+.pricing-box > .btn {
+    background-color: #27272798
+}
+
+.pricing-box > .premium-btn {
+    background-color: #10b5ff
+}
+
+.for-usd > .usd {
+    color: rgb(48, 142, 250);
+    font-size: 35px
+}
+
+.for-usd > span {
+    color: #3534347d;
+}
+
+.checks del {
+    color: #3636368e
+}
+
+.del {
+    filter: grayscale(0.8);
+}
+
+#question {
+    background-color: rgba(237, 237, 255, 0.39);
+    padding: 60px 0;
+}
+
+.questions-box {
+    width: 60%;
+    margin: auto auto;
+    display: flex;
+    gap: 30px;
+    color: rgba(62, 62, 62, 0.7)
+}
+
+.questions-box > div > * {
+    margin-top: 15px;
+}
+
+#thinks {
+    width: 60%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 30px auto;
+    padding: 10px;
+    gap: 20px;
+}
+
+#thinks > img {
+    width: 100%;
+    grid-area: 1 / 3 / span 1 / span 2;
+}
+
+#our-blog {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    width: 60%;
+    margin: 60px auto;
+}
+
+#our-blog > div {
+    width: 100%;
+}
+
+#our-blog img {
+    width: 100%;
+}
+
+.blog-box > * {
+    margin-top: 15px;
+    color: rgba(50, 49, 49, 0.633)
+}
+
+.blog-box > div {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center
+}
+
+.blog-box > div > div {
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.71)
+}
+
+.blog-box > div > div {
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.71)
+}
+
+.news {
+    color: rgb(22, 137, 214);
+}
+
+.blog-box > span {
+    color: rgb(22, 137, 214);
+    cursor: pointer;
+}
+
+#contact {
+    background-color: rgba(237, 237, 255, 0.39);
+    padding: 30px 0;
+    margin: 20px auto 0 auto;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin: 50px auto;
+}
+
+.info > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3);
+    text-align: center;
+    min-height: 100px;
+}
+
+.info > div > img {
+    width: 36px;
+}
+
+.info > div > a {
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 15px;
+    color: #10b5ff;
+}
+
+.info > div:first-child > a {
+    color: #2c2c2c;
+}
+
+.form {
+    margin: 20px auto 0 auto;
+    display: grid;
+    width: 60%;
+    background-color: white
+}
+
+.form > h5 {
+    margin: 30px 0 0 30px;
+    font-size: 20px;
+    color: #6c6c6c;
+}
+
+.form > form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 30px;
+    color: #6c6c6c;
+}
+
+.form > form > * {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.form > form input {
+    width: 100%;
+    border-radius: 13px;
+    padding: 8px 0 8px 5px;
+    border: 0.5px solid #b0b0b0;
+    margin-top: 8px;
+    outline: none;
+}
+
+.form > form textarea {
+    width: 100%;
+    padding: 8px 0 8px 5px;
+    border-radius: 15px;
+    border: 0.5px solid #b0b0b0;
+}
+
+.form > form > .btn {
+    width: 200px;
+    padding: 12px 30px;
+}
+
+#for-name {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+}
+
+footer {
+    padding: 50px 0;
+    background-color: #363636
+}
+
+#footer-menu {
+    width: 60%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+
+#footer-menu > div > h5 {
+    color: rgba(205, 199, 199, 0.797);
+    margin: 20px auto
+}
+
+#footer-menu > div > img {
+    width: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#footer-menu > div > p {
+    color: rgba(134, 134, 134, 0.84);
+    margin: 10px auto
+}
+
+#footer-menu > div input {
+    padding: 10px 15px;
+    border-radius: 10px 0 0 10px;
+    margin: 0;
+    border: 0.3px solid gray;
+    background-color: transparent;
+}
+
+#footer-menu > div input:focus {
+    outline: none;
+}
+
+#footer-menu > div button {
+    padding: 10px 10px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin-left: -4px;
+}
+
+
+footer > .row {
+    width: 60%;
+}
+
+.quick-links > a {
+    color: rgba(134, 134, 134, 0.84);
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+footer > p {
+    text-align: center;
+    color: rgba(134, 134, 134, 0.84);
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: #bebebe;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    header {
+        width: 90%;
+    }
+
+    .main-menu > li {
+        margin-right: 13px;
+    }
+
+    .mini-info > p {
+        font-size: 30px;
+    }
+
+    #about-oneder {
+        width: 80%;
+    }
+
+    #team-box {
+        width: 80%;
+    }
+
+    .crazy-photos {
+        width: 80%;
+    }
+
+    #pricing-items {
+        width: 80%;
+    }
+
+    .questions-box {
+        width: 80%;
+    }
+
+    #thinks {
+        width: 80%;
+    }
+
+    #our-blog {
+        width: 80%;
+    }
+
+    #footer-menu {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        width: 100%;
+    }
+
+    .main-menu > li {
+        margin-right: 10px;
+    }
+
+    .mini-info > p {
+        font-size: 25px;
+    }
+
+    #about-oneder {
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #about-oneder > img {
+        width: 100%;
+    }
+
+    .oneder-text {
+        text-align: center;
+    }
+
+    #team-box {
+        width: 90%;
+    }
+
+    .crazy-photos {
+        width: 90%;
+    }
+
+    #our-services > div {
+        width: 90%;
+    }
+
+    #pricing-items {
+        width: 98%;
+        gap: 10px;
+    }
+
+    #thinks {
+        width: 90%;
+    }
+
+    #our-blog {
+        width: 90%;
+    }
+
+    #footer-menu {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #menu-ic {
+        display: block;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    header > * {
+        margin: 0 15px;
+    }
+
+    header > nav {
+        display: none;
+    }
+
+    .mini-info {
+        width: 60%;
+    }
+
+    #team-box {
+        grid-template-columns: auto auto auto;
+    }
+
+    .crazy-photos {
+        width: 95%;
+        gap: 10px;
+    }
+
+    #our-services > div {
+        grid-template-columns: auto auto;
+    }
+
+    #testimonials-box {
+        width: 60%;
+    }
+
+    #pricing-items {
+        grid-template-columns: auto;
+    }
+
+    .pricing-box {
+        margin: auto auto;
+        width: 60%;
+    }
+
+    #thinks > img {
+        grid-area: 2 / 1 / span 1 /span 2;
+    }
+
+    #our-blog {
+        grid-template-columns: auto auto;
+    }
+
+    #contact > div {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    #footer-menu {
+        grid-template-columns: auto auto;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    header {
+        gap: 50px;
+    }
+
+    #team-box {
+        grid-template-columns: auto auto;
+    }
+
+    .mini-info > p {
+        font-size: 15px;
+    }
+
+    .mini-info > button {
+        padding: 10px 15px;
+    }
+
+    #about-oneder {
+        width: 95%;
+    }
+
+    .title {
+        font-size: 25px;
+        margin: 30px 0;
+    }
+
+    .portfolio-menu > .btn {
+        padding: 5px 20px;
+        background-color: rgba(208, 207, 207, 0.62);
+        color: black;
+    }
+
+    .crazy-photos {
+        grid-template-columns: auto auto auto;
+    }
+
+    .crazy-photos > .photo1 {
+        grid-area: 1 / 1 / span 9 /span 1;
+    }
+
+    .crazy-photos > .photo2 {
+        grid-area: 1 / 2 / span 10 /span 1;
+    }
+
+    .crazy-photos > .photo3 {
+        grid-area: 1 / 3 / span 11 /span 1;
+    }
+
+    .crazy-photos > .photo4 {
+        grid-area: 10 / 1 / span 10 /span 1;
+    }
+
+    .crazy-photos > .photo5 {
+        grid-area: 11 / 2 / span 13 /span 1;
+    }
+
+    .crazy-photos > .photo6 {
+        grid-area: 12 / 3 / span 11 /span 1;
+    }
+
+    .crazy-photos > .photo7 {
+        grid-area: 20 / 1 / span 6 /span 1;
+    }
+
+    .crazy-photos > .photo8 {
+        grid-area: 24 / 2 / span 6 /span 1;
+    }
+
+    .crazy-photos > .photo9 {
+        grid-area: 23 / 3 / span 10 /span 1;
+    }
+
+    .crazy-photos > .photo10 {
+        grid-area: 26 / 1 / span 6 /span 1;
+    }
+
+    .crazy-photos > .photo11 {
+        grid-area: 30 / 2 / span 6 /span 1;
+    }
+
+    .crazy-photos > .photo12 {
+        grid-area: 30 / 3 / span 12 /span 1;
+    }
+
+    .crazy-photos > .photo13 {
+        grid-area: 32 / 1 / span 6 /span 1;
+    }
+
+    #testimonials-box {
+        width: 80%;
+    }
+
+    #thinks {
+        width: 95%;
+        gap: 10px;
+    }
+
+    #our-blog {
+        grid-template-columns: auto;
+    }
+
+    #contact > div {
+        width: 95%;
+    }
+
+    .info > div > img {
+        width: 25px;
+    }
+
+    .info > div > a {
+        font-size: 10px;
+    }
+
+    #footer-menu {
+        width: 90%;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+}
