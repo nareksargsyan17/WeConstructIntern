@@ -7,10 +7,14 @@ body {
     font-family: system-ui;
 }
 
-.config {
-    width: 60%;
+/* container */
+
+.container {
+    max-width: 1200px;
     margin: 0 auto;
 }
+
+/*header section*/
 
 header {
     height: 70px;
@@ -46,8 +50,6 @@ header > nav {
     display: flex;
     height: 100%;
     gap: 20px;
-    justify-content: center;
-    align-items: center;
 }
 
 .menu > li {
@@ -72,6 +74,8 @@ header > nav {
     color: #2499ef;
 }
 
+/* main section */
+
 main {
     height: calc(100vh - 70px);
     background-image: url("img/design.jpg");
@@ -84,13 +88,12 @@ main {
 
 main > div {
     width: 60%;
-    margin: 0 auto;
     text-align: center;
     color: white;
-}
-
-main > div > * {
-    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
 main > div > h2 {
@@ -119,10 +122,12 @@ main > div > button > img {
     margin-right: 15px;
 }
 
+/*fast info */
+
 .fast-info {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    margin: 80px auto 80px auto;
+    padding: 80px 0;
     gap: 30px;
 }
 
@@ -142,7 +147,9 @@ main > div > button > img {
     color: #2499ef;
 }
 
-.biness-section {
+/*business section*/
+
+.business-section {
     background-color: #f9f9f9;
     padding: 50px 0;
 }
@@ -186,6 +193,8 @@ main > div > button > img {
     width: 40%;
 }
 
+/* service section */
+
 #service {
     padding: 50px 0;
 }
@@ -194,13 +203,15 @@ main > div > button > img {
     color: #3b3b3b;
     letter-spacing: 5px;
     font-size: 40px;
+    text-align: left;
 }
 
-.title > div {
+.title > h3::after {
+    content: "";
     margin-top: 15px;
-    width: 5%;
-    height: 3px;
-    background-color: #2499ef;
+    display: block;
+    width: 40px;
+    border: 2px solid #2499ef;
 }
 
 .services-box {
@@ -227,6 +238,8 @@ main > div > button > img {
     color: #3b3b3b;
     margin-top: 10px;
 }
+
+/*portfolio section*/
 
 #portfolio {
     text-align: center;
@@ -276,9 +289,9 @@ main > div > button > img {
     height: 300px;
 }
 
-#portfolio > button {
+.btn{
     margin-top: 50px;
-    padding: 15px 25px;
+    padding: 12px 20px;
     background-color: #2499ef;
     border: none;
     color: white;
@@ -286,9 +299,11 @@ main > div > button > img {
     font-weight: bold;
 }
 
-#portfolio > button > img {
+.btn > img {
     margin-right: 10px;
 }
+
+/* info section */
 
 #info {
     display: grid;
@@ -312,9 +327,296 @@ main > div > button > img {
     opacity: 80%;
 }
 
-@media screen  and (max-width: 1200px){
-    .config {
-        width: 80%;
+/* team section */
+
+#team {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.card-box {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.card {
+    box-shadow: 0 0 6px -1px rgba(114, 114, 114, 0.75);
+}
+
+.card-info {
+    padding: 10px 15px 15px 15px;
+}
+
+.card-info > h3 {
+    color: #2499ef;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.card-info > p {
+    color: rgba(59, 59, 59, 0.72);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.card-info > * {
+    margin-top: 15px;
+}
+
+.card > img {
+    width: 100%;
+}
+
+.social-bar a {
+    padding: 3px ;
+}
+
+.social-bar  img {
+    height: 20px;
+    cursor: pointer;
+}
+
+/* thinks section */
+
+#thinks {
+    background-color: #2499ef;
+    padding: 40px 0;
+}
+
+.thinks-box {
+    width: 40%;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.staff-photo {
+    width: 80px;
+    height: 80px;
+    background-image: url("img/staff.jpg");
+    background-size: cover;
+    background-position: 50% 30%;
+    border-radius: 50%;
+}
+
+.thinks-box > h3 {
+    color: white;
+    font-weight: bold;
+}
+
+.thinks-box > span {
+    color: rgba(255, 255, 255, 0.63);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.thinks-box > p {
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* support section */
+
+#support {
+    background-color: #f9f9f9 ;
+    padding: 50px 0;
+}
+
+#support-box {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+}
+
+#support-box > img {
+    width: 100%;
+}
+
+/* stories section */
+
+#stories {
+    padding: 50px 0;
+}
+
+.card-comments {
+    padding: 10px 15px;
+    border-top: 0.4px solid rgba(128, 128, 128, 0.68);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-comments > div {
+    display: flex;
+    align-items: center;
+}
+
+.card-comments > div > img {
+    width: 25px;
+    cursor: pointer;
+}
+
+.card-comments > div > p {
+    margin-left: 10px;
+    color: #2499ef;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card-comments img {
+    width: 40px;
+    cursor: pointer;
+}
+
+.story-btn-div {
+    text-align: center;
+}
+
+/* contact section */
+
+#contact {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.contact-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.contact-way {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.contact-way a{
+    background-color: #2499ef;
+    padding: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px -1px rgba(114, 114, 114, 0.75);
+}
+
+.contact-way img {
+    width: 25px;
+}
+
+.contact-form > form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.contact-form > form input {
+    width: 100%;
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.4px solid rgba(128, 128, 128, 0.68);
+    color: #3b3b3b;
+}
+
+.contact-form > form button {
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-form > form button > img {
+    width: 20px;
+}
+
+/* footer section */
+
+footer {
+    border-top: 3px solid #2499ef;
+    background-color: #333333;
+    padding-top: 50px;
+}
+
+.footer-menu {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 20px;
+    color: white;
+    padding-bottom: 50px;
+    font-size: 14px;
+}
+
+.footer-menu  .title {
+    margin: 20px 0;
+}
+
+.footer-menu  .title > h3{
+    color: white;
+    font-size: 20px;
+}
+
+.about > .social-bar {
+    margin-top: 40px;
+    display: flex;
+}
+
+.about > .social-bar > a {
+    margin-right: 5px;
+    border: none;
+    box-shadow: none;
+    padding: 11px 9px 9px 9px;
+    background-color: #2a2a2a;
+}
+
+.about > .social-bar img {
+    width: 15px;
+    height: 15px;
+}
+
+.recent > p {
+    margin-top: 7px;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+.links > a {
+    cursor: pointer;
+}
+
+.gallery > .portfolio-pictures {
+    gap: 5px;
+}
+
+.gallery > .portfolio-pictures > img {
+    height: 50px;
+}
+
+.ending-info {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.ending-info a {
+    cursor: pointer;
+    color: #2499ef;
+}
+
+@media screen  and (max-width: 1200px) {
+    .container {
+        max-width: 800px;
     }
 
     main > div > h2 {
@@ -336,7 +638,7 @@ main > div > button > img {
     }
 }
 
-@media screen  and (max-width: 950px){
+@media screen  and (max-width: 950px) {
     .business-info {
         flex-direction: column;
     }
@@ -360,10 +662,31 @@ main > div > button > img {
     .portfolio-bar > .menu-img {
         display: inline;
     }
+
+    #info {
+        grid-template-columns: auto auto;
+        gap: 30px;
+    }
+
+    .card-box {
+        grid-template-columns: auto auto;
+    }
+
+    .thinks-box {
+        width: 80%;
+    }
+
+    .footer-menu {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-menu .portfolio-pictures {
+        grid-template-columns: auto auto auto;
+    }
 }
 
-@media screen  and (max-width: 800px){
-    .config {
+@media screen  and (max-width: 800px) {
+    .container {
         width: 95%;
     }
 
@@ -389,7 +712,7 @@ main > div > button > img {
     }
 }
 
-@media screen  and (max-width: 700px){
+@media screen  and (max-width: 700px) {
     .menu-img {
         display: inline;
         cursor: pointer;
@@ -398,9 +721,13 @@ main > div > button > img {
     header > nav {
         display: none;
     }
+
+    #support-box {
+        grid-template-columns: auto auto;
+    }
 }
 
-@media screen  and (max-width: 500px){
+@media screen  and (max-width: 600px) {
     .fast-info {
         grid-template-columns: auto;
     }
@@ -419,5 +746,32 @@ main > div > button > img {
 
     .portfolio-pictures {
         grid-template-columns: auto;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen  and (max-width: 500px) {
+    #info {
+        grid-template-columns: auto;
+        gap: 30px;
+    }
+
+    .card-box {
+        grid-template-columns: auto;
+    }
+
+    .thinks-box {
+        width: 90%;
+    }
+
+    #support-box {
+        grid-template-columns: auto;
+    }
+
+    .footer-menu {
+        grid-template-columns: 1fr;
     }
 }
