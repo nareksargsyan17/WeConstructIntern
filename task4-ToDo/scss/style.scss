@@ -1,0 +1,207 @@
+$main-color : #ae81e7;
+$box-shadow : 0 0 6px -1px $main-color;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+section {
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20vh;
+  gap: 20px;
+
+
+  #todo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border: 1px solid $main-color;
+    box-shadow: $box-shadow;
+    background-color: rgba(242, 236, 253, 0.1);
+    min-width: 600px;
+
+    h2 {
+      color: $main-color;
+      font-size: 50px;
+    }
+
+    .new-task {
+      padding: 10px 15px;
+      background-color: $main-color;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 25px;
+        opacity: 0;
+        margin-right: 5px;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover {
+        img{
+          opacity: 100%;
+        }
+      }
+    }
+
+    form {
+      display: none;
+      justify-content: space-between;
+      width: 100%;
+
+      .add-input {
+        visibility: hidden;
+        border-radius: 8px 0 0 8px;
+        border: 1px solid $main-color;
+        color: rgba(16, 16, 16, 0.78);
+        width: 0;
+        transition: width 1s ease;
+
+        &:focus {
+          outline: none;
+          border: 2px solid $main-color;
+        }
+      }
+
+      .add-button {
+        width: 0;
+        padding: 10px;
+        background-color: $main-color;
+        cursor: pointer;
+        border-radius: 0 8px 8px 0;
+        visibility: hidden;
+        transition: width 1s ease;
+        border: none;
+
+        img {
+          width: 25px;
+        }
+      }
+    }
+
+
+    .del {
+      padding: 10px;
+      background-color: $main-color;
+      cursor: pointer;
+      border-radius: 0 8px 8px 0;
+      border: none;
+
+      img {
+        width: 25px;
+      }
+    }
+
+    .delete-all {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+
+      .trash-all {
+        visibility: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        border-radius: 10px;
+        color: white;
+
+        img {
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        &:hover {
+          img{
+            opacity: 100%;
+          }
+        }
+      }
+    }
+
+    ul {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        border: 0.1px solid $main-color;
+        border-radius: 8px 8px 8px 8px;
+
+        .container {
+          font-family: system-ui, sans-serif;
+          font-size: 2rem;
+          font-weight: bold;
+          line-height: 1.1;
+          display: grid;
+          grid-template-columns: 1em auto;
+          gap: 0.5em;
+
+          input[type="checkbox"] {
+            -webkit-appearance: none;
+            font: inherit;
+            color: currentColor;
+            width: 30px;
+            height: 30px;
+            border: 2px solid $main-color;
+            border-radius: 0.15em;
+            display: grid;
+            place-content: center;
+            margin-left: 5px;
+            cursor: pointer;
+          }
+
+          input[type="checkbox"]::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em var(--form-control-color);
+            background-color: $main-color;
+            transform-origin: bottom left;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+          }
+
+          input[type="checkbox"]:checked::before {
+            transform: scale(1);
+          }
+        }
+
+
+        .todo-text {
+          color: rgba(100, 100, 100, 0.77);
+          font-weight: bold;
+          font-size: 16px;
+          width: 100%;
+        }
+
+      }
+    }
+  }
+
+}

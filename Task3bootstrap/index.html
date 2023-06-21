@@ -4,20 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
     <script src="https://kit.fontawesome.com/dcffc68211.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="container-lg d-flex justify-content-between align-items-center header">
-        <nav class="navbar navbar-expand-lg d-flex justify-content-between container header-nav">
-            <div class="container-fluid">
-                <a class="navbar-brand logo" href="#">
-                    <img alt="book" src="img/book.png" class="d-inline-block align-text-top">
+    <header class="d-flex justify-content-center align-items-center header">
+        <nav class="navbar navbar-expand-lg container row p-0 justify-content-between">
+            <div class="col-auto">
+                <a class="navbar-brand logo text-secondary" href="#">
+                    <img alt="book" src="img/book.png" class="d-inline-block me-2">
                     MATRL
                 </a>
             </div>
-            <div class="container menu-container">
+            <div class="col-auto menu-container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -41,7 +41,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact Us</a>
                         </li>
-                        <li class="nav-item search-box">
+                        <li class="nav-item bg-secondary">
                             <a class="nav-link" href="#"><i class="fa fa-search search" aria-hidden="true"></i></a>
                         </li>
                     </ul>
@@ -49,73 +49,523 @@
             </div>
         </nav>
     </header>
-    <main class="container-fluid main d-flex justify-content-center align-items-center">
-        <div class="text-center d-flex justify-content-center flex-column align-items-center gap-3">
-            <h1 class="fs-0">Refreshing Design Elements</h1>
-            <p class="fs-4">Extensively Customizable Tons of UI Elements</p>
-            <button class="fw-bold fs-6 border-0 py-3 px-5"><img class="w-16 mx-2" alt="triangle" src="img/triangle.png">LEARN MORE</button>
+    <div id="carouselExampleIndicator" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicator" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicator" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicator" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-    </main>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <main class="container-fluid main d-flex justify-content-center align-items-center">
+                    <div class="text-center d-flex justify-content-center flex-column align-items-center gap-3">
+                        <h1 class="fs-1">Refreshing Design Elements</h1>
+                        <p class="fs-5">Extensively Customizable Tons of UI Elements</p>
+                        <button class="fw-bold fs-6 border-0 py-3 px-5"><img class="w-16 mx-2" alt="triangle" src="img/triangle.png">LEARN MORE</button>
+                    </div>
+                </main>
+            </div>
+            <div class="carousel-item">
+                <main class="container-fluid main d-flex justify-content-center align-items-center">
+                    <div class="text-center d-flex justify-content-center flex-column align-items-center gap-3">
+                        <h1 class="fs-1">Refreshing Design Elements</h1>
+                        <p class="fs-5">Extensively Customizable Tons of UI Elements</p>
+                        <button class="fw-bold fs-6 border-0 py-3 px-5"><img class="w-16 mx-2" alt="triangle" src="img/triangle.png">LEARN MORE</button>
+                    </div>
+                </main>
+            </div>
+            <div class="carousel-item">
+                <main class="container-fluid main d-flex justify-content-center align-items-center">
+                    <div class="text-center d-flex justify-content-center flex-column align-items-center gap-3">
+                        <h1 class="fs-1">Refreshing Design Elements</h1>
+                        <p class="fs-5">Extensively Customizable Tons of UI Elements</p>
+                        <button class="fw-bold fs-6 border-0 py-3 px-5"><img class="w-16 mx-2" alt="triangle" src="img/triangle.png">LEARN MORE</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicator" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicator" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
     <section class="container text-center py-5">
         <div class="row">
-            <div class="col-sm">
+            <div class="col-md-6 col-lg-3">
                 <img class="mb-5" src="img/lab.png" alt="lab">
-                <h3 class="info-title">Bootsrap 4</h3>
+                <h3 class="text-secondary">Bootsrap 4</h3>
                 <p>Exceptir sint accecant cupdalat non prodoi, sunt in cupla</p>
             </div>
-            <div class="col-sm">
-                <img class="mb-5" src="img/lab.png" alt="lab">
-                <h3 class="info-title">Bootsrap 4</h3>
+            <div class="col-md-6 col-lg-3">
+                <img class="mb-5" src="img/light.png" alt="lab">
+                <h3 class="text-secondary">Material Design</h3>
                 <p>Exceptir sint accecant cupdalat non prodoi, sunt in cupla</p>
             </div>
-            <div class="col-sm">
-                <img class="mb-5" src="img/lab.png" alt="lab">
-                <h3 class="info-title">Bootsrap 4</h3>
+            <div class="col-md-6 col-lg-3">
+                <img class="mb-5" src="img/arrow.png" alt="lab">
+                <h3 class="text-secondary">Fast and Clean</h3>
                 <p>Exceptir sint accecant cupdalat non prodoi, sunt in cupla</p>
             </div>
-            <div class="col-sm">
-                <img class="mb-5" src="img/lab.png" alt="lab">
-                <h3 class="info-title">Bootsrap 4</h3>
+            <div class="col-md-6 col-lg-3">
+                <img class="mb-5" src="img/responsive.png" alt="lab">
+                <h3 class="text-secondary">Fully Resposive</h3>
                 <p>Exceptir sint accecant cupdalat non prodoi, sunt in cupla</p>
             </div>
         </div>
     </section>
-    <section class="py-5 business container-fluid d-flex justify-content-center">
-        <div class="container row">
-            <div class="col-sm">
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Active</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Disabled</a>
-                    </li>
-                </ul>
+    <section class="py-5 business d-flex justify-content-center bg-light">
+        <div class="container row gap-3">
+            <div class="col-md-12 col-lg-5 shadow business-info">
+                <div>
+                    <ul class="nav nav-pills justify-content-center flex-md-nowrap business-menu">
+                        <li class="nav-item">
+                            <a class="nav-link text-center text-secondary" href="#"><img class="d-block" src="img/responsive.png" alt="business">Business</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center text-secondary" href="#"><img class="d-block" src="img/responsive.png" alt="startup">Startup</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center text-secondary" href="#"><img class="d-block" src="img/arrow.png" alt="agency">Agency</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center text-secondary" href="#"><img class="d-block" src="img/light.png" alt="saas">SaaS</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-3 business-text">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
             </div>
-            <div class="col-sm">
-                <ul class="nav nav-pills">
+            <div class="col-md-12 col-lg-6">
+                <img class="w-100" src="img/design.jpg" alt="matrl">
+            </div>
+        </div>
+    </section>
+    <section class="container py-5">
+        <div class="title mb-5">
+            <h3>SERVICES</h3>
+        </div>
+        <div class="row gap-3 mb-5 service">
+            <div class="col-md-6 col-sm-12 col-lg-4 row">
+                <div class="col-auto">
+                    <img  src="img/arrow.png" alt="service">
+                </div>
+                <div class="col">
+                    <h3 class="text-secondary">Discovery & Strategy</h3>
+                    <p class="service-text">Exceptir sint accecant cupdalat non prodoi, sunt in cupla</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-4 row">
+                <div class="col-auto">
+                    <img src="img/com.png"  alt="service">
+                </div>
+                <div class="col">
+                    <h3 class="text-secondary">Discovery & Strategy</h3>
+                    <p class="service-text">Exceptir sint accecant cupdalat non prodoi, sunt in cupla</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-4 row">
+                <div class="col-auto">
+                    <img  src="img/arrow.png" alt="service">
+                </div>
+                <div class="col">
+                    <h3 class="text-secondary">Discovery & Strategy</h3>
+                    <p class="service-text">Exceptir sint accecant cupdalat non prodoi, sunt in cupla</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-4 row">
+                <div class="col-auto">
+                    <img  src="img/arrow.png" alt="service">
+                </div>
+                <div class="col">
+                    <h3 class="text-secondary">Discovery & Strategy</h3>
+                    <p class="service-text">Exceptir sint accecant cupdalat non prodoi, sunt in cupla</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-4 row">
+                <div class="col-auto">
+                    <img src="img/com.png"  alt="service">
+                </div>
+                <div class="col">
+                    <h3 class="text-secondary">Discovery & Strategy</h3>
+                    <p class="service-text">Exceptir sint accecant cupdalat non prodoi, sunt in cupla</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-4 row">
+                <div class="col-auto">
+                    <img  src="img/arrow.png" alt="service">
+                </div>
+                <div class="col">
+                    <h3 class="text-secondary">Discovery & Strategy</h3>
+                    <p class="service-text">Exceptir sint accecant cupdalat non prodoi, sunt in cupla</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-light" id="portfolio">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="title mb-lg-0 mb-sm-3 col-auto">
+                    <h3>PORTFOLIO</h3>
+                </div>
+                <ul class="nav nav-pills gap-3 col-auto portfolio-menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Active</a>
+                        <a class="nav-link text-center" href="#">All</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link text-center" href="#">Business</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link text-center" href="#">Creative</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Disabled</a>
+                        <a class="nav-link text-center" href="#">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="#">Free</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="#">More</a>
                     </li>
                 </ul>
             </div>
         </div>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                    <img class="w-100 h-100" src="img/abs1.jpg" alt="photo">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                    <img class="w-100 h-100" src="img/abs2.jpg" alt="photo">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                    <img class="w-100 h-100" src="img/abs3.jpg" alt="photo">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                    <img class="w-100 h-100" src="img/abs4.jpg" alt="photo">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                    <img class="w-100 h-100" src="img/abs5.jpg" alt="photo">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                    <img class="w-100 h-100" src="img/abs6.jpg" alt="photo">
+                </div>
+            </div>
+        </div>
+        <div class="container text-center py-5">
+            <button class="btn btn-primary"><img class="me-2" src="img/explore.png" alt="btn">EXPLORE FOR MORE WORK</button>
+        </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <section class="container py-5">
+        <div class="row work-info">
+            <div class="col-lg-3 col-sm-6 text-center">
+                <img src="img/check.png" alt="image">
+                <h4 class="fw-bold">768</h4>
+                <p>Project Deelivered</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center">
+                <img src="img/clock.png" alt="image">
+                <h4 class="fw-bold">900</h4>
+                <p>Working Hours</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center">
+                <img src="img/responsive.png" alt="image">
+                <h4 class="fw-bold">215</h4>
+                <p>Work Station</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center">
+                <img src="img/globe.png" alt="image">
+                <h4 class="fw-bold">553</h4>
+                <p>International Clients</p>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-light" id="team">
+        <div class="container">
+            <div class="title mb-5">
+                <h3>OUR TEAM</h3>
+            </div>
+            <div class="row gap-3 justify-content-center">
+                <div class="col-lg col-md-5">
+                    <div class="card shadow">
+                        <img class="w-100" src="img/staff.jpg" alt="staff">
+                        <div class="card-info p-3">
+                            <h3 class="text-secondary">Rob Percy</h3>
+                            <p>CO-FOUNDER</p>
+                            <div class="social-bar">
+                                <a href="https://twitter.com"><img src="img/twitter.png" alt="social"></a>
+                                <a href="https://www.facebook.com/"><img src="img/facebook.png" alt="social"></a>
+                                <a href="https://www.instagram.com/"><img src="img/instagram.png" alt="social"></a>
+                                <a href="https://www.linkedin.com"><img src="img/in.png" alt="social"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-md-5">
+                    <div class="card shadow">
+                        <img class="w-100" src="img/staff.jpg" alt="staff">
+                        <div class="card-info p-3">
+                            <h3 class="text-secondary">Rob Percy</h3>
+                            <p>CO-FOUNDER</p>
+                            <div class="social-bar">
+                                <a href="https://twitter.com"><img src="img/twitter.png" alt="social"></a>
+                                <a href="https://www.facebook.com/"><img src="img/facebook.png" alt="social"></a>
+                                <a href="https://www.instagram.com/"><img src="img/instagram.png" alt="social"></a>
+                                <a href="https://www.linkedin.com"><img src="img/in.png" alt="social"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-md-5">
+                    <div class="card shadow">
+                        <img class="w-100" src="img/staff.jpg" alt="staff">
+                        <div class="card-info p-3">
+                            <h3 class="text-secondary">Rob Percy</h3>
+                            <p>CO-FOUNDER</p>
+                            <div class="social-bar">
+                                <a href="https://twitter.com"><img src="img/twitter.png" alt="social"></a>
+                                <a href="https://www.facebook.com/"><img src="img/facebook.png" alt="social"></a>
+                                <a href="https://www.instagram.com/"><img src="img/instagram.png" alt="social"></a>
+                                <a href="https://www.linkedin.com"><img src="img/in.png" alt="social"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-md-5">
+                    <div class="card shadow">
+                        <img class="w-100" src="img/staff.jpg" alt="staff">
+                        <div class="card-info p-3">
+                            <h3 class="text-secondary">Rob Percy</h3>
+                            <p>CO-FOUNDER</p>
+                            <div class="social-bar">
+                                <a href="https://twitter.com"><img src="img/twitter.png" alt="social"></a>
+                                <a href="https://www.facebook.com/"><img src="img/facebook.png" alt="social"></a>
+                                <a href="https://www.instagram.com/"><img src="img/instagram.png" alt="social"></a>
+                                <a href="https://www.linkedin.com"><img src="img/in.png" alt="social"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-secondary" id="thinks">
+        <div class="container justify-content-center d-flex">
+            <div id="carouselExampleIndicators" class="carousel slide w-50">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-column align-items-center text-center gap-3">
+                            <div class="staff-photo"></div>
+                            <h3 class="staff-name">Ana Blunt</h3>
+                            <span class="staff-type">Creative Director</span>
+                            <p class="staff-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center text-center gap-3">
+                            <div class="staff-photo"></div>
+                            <h3 class="staff-name">Ana Blunt</h3>
+                            <span class="staff-type">Creative Director</span>
+                            <p class="staff-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center text-center gap-3">
+                            <div class="staff-photo"></div>
+                            <h3 class="staff-name">Ana Blunt</h3>
+                            <span class="staff-type">Creative Director</span>
+                            <p class="staff-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="d-flex justify-content-center py-5 bg-light" id="support">
+        <div class="container row justify-content-center">
+            <img class="col-lg-3 col-md-5 p-1" src="img/gucci.jpg" alt="gucci">
+            <img class="col-lg-3 col-md-5 p-1" src="img/gucci.jpg" alt="gucci">
+            <img class="col-lg-3 col-md-5 p-1" src="img/gucci.jpg" alt="gucci">
+            <img class="col-lg-3 col-md-5 p-1" src="img/gucci.jpg" alt="gucci">
+        </div>
+    </section>
+    <section class="container py-5" id="story">
+        <div class="title mb-5">
+            <h3>OUR STORIES</h3>
+        </div>
+        <div class="row gap-3 justify-content-center">
+            <div class="col-lg col-md-5">
+                <div class="card shadow">
+                    <img class="w-100" src="img/enjoy.jpg" alt="staff">
+                    <div class="card-info p-3">
+                        <h3 class="text-secondary">MUSIC for refreshment</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <div class="card-comments d-flex justify-content-between pt-3">
+                            <div class="d-flex gap-3 align-items-center">
+                                <img width="24" height="24" src="img/comment.png" alt="comment">
+                                <p class="m-0 text-secondary fw-bold">24 Comments</p>
+                            </div>
+                            <a href="#"><img src="img/right.png" alt="rightarrow"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg col-md-5">
+                <div class="card shadow">
+                    <img class="w-100" src="img/enjoy.jpg" alt="staff">
+                    <div class="card-info p-3">
+                        <h3 class="text-secondary">MUSIC for refreshment</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <div class="card-comments d-flex justify-content-between pt-3">
+                            <div class="d-flex gap-3 align-items-center">
+                                <img width="24" height="24" src="img/comment.png" alt="comment">
+                                <p class="m-0 text-secondary fw-bold">24 Comments</p>
+                            </div>
+                            <a href="#"><img src="img/right.png" alt="rightarrow"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg col-md-5">
+                <div class="card shadow">
+                    <img class="w-100" src="img/enjoy.jpg" alt="staff">
+                    <div class="card-info p-3">
+                        <h3 class="text-secondary">MUSIC for refreshment</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <div class="card-comments d-flex justify-content-between pt-3">
+                            <div class="d-flex gap-3 align-items-center">
+                                <img width="24" height="24" src="img/comment.png" alt="comment">
+                                <p class="m-0 text-secondary fw-bold">24 Comments</p>
+                            </div>
+                            <a href="#"><img src="img/right.png" alt="rightarrow"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center py-5">
+            <button class="btn btn-primary"><img class="me-2" src="img/explore.png" alt="btn">EXPLORE FOR MORE STORIES</button>
+        </div>
+    </section>
+    <section class="py-5 bg-light" id="contact">
+        <div class="container">
+            <div class="title mb-5">
+                <h3>CONTACT US</h3>
+            </div>
+            <div class="container-fluid row gap-4">
+                <div class="col-lg p-0 d-flex flex-column gap-3">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <div class="contact-way d-flex gap-3">
+                        <a class="p-2 shadow" target="_blank" href="https://www.google.com/maps/place/We+Construct/@40.2005416,44.5330705,17z/data=!4m15!1m8!3m7!1s0x406abd88ab05ca99:0x40d85ad147080d85!2sWe+Construct!8m2!3d40.2005375!4d44.5356454!10e1!16s%2Fg%2F11fkb3s8qf!3m5!1s0x406abd88ab05ca99:0x40d85ad147080d85!8m2!3d40.2005375!4d44.5356454!16s%2Fg%2F11fkb3s8qf?entry=ttu"><img class="w-100" src="img/location.png" alt="location"></a>
+                        <p>23 Davit Anhaght Street, Yerevan 0069</p>
+                    </div>
+                    <div class="contact-way d-flex gap-3">
+                        <a class="p-2 shadow" href="tel:093326464"><img class="w-100" src="img/phone.png" alt="location"></a>
+                        <p>093326464</p>
+                    </div>
+                    <div class="contact-way d-flex gap-3">
+                        <a class="p-2 shadow" href="https://mail.google.com/" target="_blank"><img class="w-100" src="img/mail.png" alt="location"></a>
+                        <p>support@matrl.com</p>
+                    </div>
+                    <div class="contact-way d-flex gap-3">
+                        <a class="p-2 shadow" href="#"><img class="w-100" src="img/time.png" alt="location"></a>
+                        <p>Mon to Sat: 09:30 AM - 10:30 PM</p>
+                    </div>
+                </div>
+                <div class="contact-form col-lg p-0">
+                    <form class="row gap-3 container p-0">
+                        <label class="col">
+                            <input class="form-control" type="text" placeholder="Name">
+                        </label>
+                        <label>
+                            <input class="form-control" type="email" placeholder="Email">
+                        </label>
+                        <label>
+                            <input class="form-control" type="text" placeholder="Subject">
+                        </label>
+                        <label>
+                            <input class="form-control" type="text" placeholder="Message">
+                        </label>
+                        <div class="container py-5">
+                            <button class="btn btn-primary"><img class="me-2" src="img/comment.png" alt="btn">SEND MESSAGE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="d-flex justify-content-center align-items-center flex-column pt-5 px-0">
+        <div class="container row gap-5 py-3">
+            <div class="col-lg col-md-5">
+                <div class="title">
+                    <h3>ABOUT</h3>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <div class="social-bar">
+                    <a href="#"><img src="img/footface.png" alt="social"></a>
+                    <a href="#"><img src="img/foottwit.png" alt="social"></a>
+                    <a href="#"><img src="img/footinsta.png" alt="social"></a>
+                    <a href="#"><img src="img/footgit.png" alt="social"></a>
+                    <a href="#"><img src="img/footin.png" alt="social"></a>
+                </div>
+            </div>
+            <div class="col-lg col-md-5">
+                <div class="title">
+                    <h3>RECENT POSTS</h3>
+                </div>
+                <div class="posts d-flex flex-column gap-1">
+                    <a href="#">Growth Hacking 101</a>
+                    <a href="#">Growth Hacking 101</a>
+                    <a href="#">Growth Hacking 101</a>
+                    <a href="#">Growth Hacking 101</a>
+                    <a href="#">Growth Hacking 101</a>
+                    <a href="#">Growth Hacking 101</a>
+                </div>
+            </div>
+            <div class="col-lg col-md-5">
+                <div class="title">
+                    <h3>QUICK LINK</h3>
+                </div>
+                <div class="links row">
+                    <a href="#" class="col-lg-5">About Us</a>
+                    <a href="#" class="col-lg-5">Brands</a>
+                    <a href="#" class="col-lg-5">Portfolio</a>
+                    <a href="#" class="col-lg-5">Support</a>
+                    <a href="#" class="col-lg-5">Contact Us</a>
+                    <a href="#" class="col-lg-5">Site Map</a>
+                    <a href="#" class="col-lg-5">Privacy Policy</a>
+                    <a href="#" class="col-lg-auto">Terms of Service</a>
+                </div>
+            </div>
+            <div class="col-lg col-md-5" >
+                <div class="title">
+                    <h3>OUR  GALLERY</h3>
+                </div>
+                <div class="row">
+                    <img class="col-lg-4 col-md-5 p-1" src="img/abs1.jpg" alt="photo">
+                    <img class="col-lg-4 col-md-5 p-1" src="img/abs2.jpg" alt="photo">
+                    <img class="col-lg-4 col-md-5 p-1" src="img/abs3.jpg" alt="photo">
+                    <img class="col-lg-4 col-md-5 p-1" src="img/abs4.jpg" alt="photo">
+                    <img class="col-lg-4 col-md-5 p-1" src="img/abs5.jpg" alt="photo">
+                    <img class="col-lg-4 col-md-5 p-1" src="img/abs6.jpg" alt="photo">
+                </div>
+            </div>
+        </div>
+        <div class="ending-info container-fluid py-4 text-center">
+            <p class="m-0">2018 MATRL Studio, All right reserved, Designed with love by <a class="text-secondary text-decoration-none" href="#">Uldeck</a></p>
+        </div>
+    </footer>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>

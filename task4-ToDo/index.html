@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ToDo Application</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <section>
+        <div id="todo">
+            <h2>ToDo APP</h2>
+            <form>
+                <input  class="add-input" type="text" placeholder="Please Enter the Task">
+                <button class="add-button" type="submit"><img src="img/plus.png" alt="plus"></button>
+            </form>
+            <button class="new-task"><img src="img/plus.png" alt="plus">Add new Task</button>
+            <div class="delete-all">
+                <button class="trash-all del">Delete All <img src="img/trash.png" alt="trash"></button>
+            </div>
+            <ul>
+                <li>
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p class="todo-text">JavaScript</p>
+                    <button class="trash del"><img src="img/trash.png" alt="trash"></button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

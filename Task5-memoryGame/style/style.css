@@ -1,0 +1,16 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+section div {
+  display: flex;
+  gap: 15px;
+}
+section img {
+  width: 120px;
+}
+
+/*# sourceMappingURL=style.css.map */

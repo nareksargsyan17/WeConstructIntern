@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui;
+}
+
+/*header section*/
+
+header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav {
+    padding: 0;
+    flex-direction: row;
+
+}
+
+.search-box {
+    background-color: #2499ef;
+}
+
+.search {
+    color: white;
+}
+
+.logo{
+    color: #2499ef;
+    font-weight: bold;
+}
+
+.menu > li > a{
+    border-top: 4px solid transparent;
+}
+
+.menu > li > a:hover {
+    color: #2499ef;
+    border-top: 4px solid #2499ef;
+}
+
+/*main section */
+
+.main {
+    height: calc(100vh - 70px);
+    background-image: url("img/design.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.main > div {
+    color: white;
+}
+
+/*info section*/
+
+.info-title {
+    color: #2499ef;
+}
+
+/*business section*/
+
+.business {
+    background-color: #f9f9f9;
+}
+
+.business-text {
+    border-top: 1px solid rgba(128, 128, 128, 0.45);
+}
+
+.business-menu > li > a {
+    color: #2499ef;
+}
+
+.business-menu > li:hover {
+    background-color: rgba(128, 128, 128, 0.46);
+}
+
+.business-info {
+    box-shadow: 0 0 6px -1px rgba(114, 114, 114, 0.75);
+}
+
+/*title div*/
+
+.title > h3 {
+    color: #3b3b3b;
+    letter-spacing: 5px;
+    font-size: 40px;
+    text-align: left;
+}
+
+.title > h3::after {
+    content: "";
+    margin-top: 15px;
+    display: block;
+    width: 40px;
+    border: 2px solid #2499ef;
+}
+
+/*services section*/
+
+.service img {
+    height: 60px;
+}
+
+.service-title {
+    color: #2499ef;
+}
+
+.service-text {
+    color: #3b3b3b;
+    margin-top: 10px;
+}
+
+/* portfolio section */
+
+#portfolio {
+    background-color: #f9f9f9;
+}
+
+.portfolio-menu {
+    height: 100%;
+}
+
+.portfolio-menu > li {
+    background-color: white;
+}
+
+.portfolio-menu > li:hover {
+    background-color: #2499ef;
+}
+
+.portfolio-menu > li:hover > a {
+    color: white;
+}
+
+.portfolio-menu > li > a {
+    color: black;
+}
+
+/*work info section */
+
+.work-info img {
+    height: 55px;
+    margin-bottom: 10px;
+}
+
+/*team section */
+
+#team {
+    background-color: #f9f9f9;
+}
+
+.card {
+    box-shadow: 0 0 6px -1px rgba(114, 114, 114, 0.75);
+}
+
+.card-info > h3 {
+    color: #2499ef;
+}
+
+.card-info > p {
+    color: #3b3b3b;
+    font-size: 12px;
+}
+
+#team .card-info  img {
+    height: 20px;
+    cursor: pointer;
+}
+
+/* thinks section */
+
+#thinks {
+    background-color: #2499ef;
+    padding: 40px 0;
+}
+
+.carousel-indicators {
+    bottom: -60px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.staff-photo {
+    width: 80px;
+    height: 80px;
+    background-image: url("img/staff.jpg");
+    background-size: cover;
+    background-position: 50% 30%;
+    border-radius: 50%;
+}
+
+.staff-name {
+    color: white;
+}
+
+.staff-type {
+    color: rgba(215, 215, 215, 0.75);
+    font-size: 13px;
+}
+
+.staff-info {
+    color: white;
+}
+
+#support {
+    background-color: #f9f9f9;
+}
+
+/*stories section */
+
+.card-comments {
+    border-top: 0.4px solid rgba(128, 128, 128, 0.68);
+}
+
+#story .card-info p {
+    color: #2499ef;
+    font-weight: bold;
+}
+
+#story .card-info > p {
+    color: #3b3b3b;
+}
+
+/*contact section */
+
+#contact {
+    background-color: #f9f9f9;
+}
+
+.contact-way > a {
+    height: 40px;
+    width: 40px;
+    background-color: #2499ef;
+    box-shadow: 0 2px 8px -1px rgba(114, 114, 114, 0.75);
+}
+
+
+.contact-form input {
+    border: none;
+    border-bottom: 0.4px solid #3b3b3b;
+    background-color: rgba(255, 255, 255, 0.33);
+    color: #3b3b3b;
+}
+
+/*footer section */
+
+footer {
+    border-top: 3px solid #2499ef;
+    background-color: #333333;
+    color: rgba(255, 255, 255, 0.77);
+}
+
+footer .title {
+    margin-bottom: 30px;
+}
+
+footer .title > h3{
+    color: white;
+    font-size: 20px;
+}
+
+.links > a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.77);
+    margin-bottom: 6px;
+}
+
+footer .social-bar a {
+    margin-right: 5px;
+    padding: 7px 9px 9px 9px;
+    background-color: #2a2a2a;
+}
+
+footer .social-bar img {
+    width: 16px;
+}
+
+.ending-info {
+    background-color: black;
+}
+
+.uldeck {
+    text-decoration: none;
+    color: #2499ef;
+}

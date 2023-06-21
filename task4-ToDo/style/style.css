@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+section {
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20vh;
+  gap: 20px;
+}
+section #todo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid #ae81e7;
+  box-shadow: 0 0 6px -1px #ae81e7;
+  background-color: rgba(242, 236, 253, 0.1);
+  min-width: 600px;
+}
+section #todo h2 {
+  color: #ae81e7;
+  font-size: 50px;
+}
+section #todo .new-task {
+  padding: 10px 15px;
+  background-color: #ae81e7;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section #todo .new-task img {
+  width: 25px;
+  opacity: 0;
+  margin-right: 5px;
+  transition: opacity 0.3s ease;
+}
+section #todo .new-task:hover img {
+  opacity: 100%;
+}
+section #todo form {
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+}
+section #todo form .add-input {
+  visibility: hidden;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #ae81e7;
+  color: rgba(16, 16, 16, 0.78);
+  width: 0;
+  transition: width 1s ease;
+}
+section #todo form .add-input:focus {
+  outline: none;
+  border: 2px solid #ae81e7;
+}
+section #todo form .add-button {
+  width: 0;
+  padding: 10px;
+  background-color: #ae81e7;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  visibility: hidden;
+  transition: width 1s ease;
+  border: none;
+}
+section #todo form .add-button img {
+  width: 25px;
+}
+section #todo .del {
+  padding: 10px;
+  background-color: #ae81e7;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  border: none;
+}
+section #todo .del img {
+  width: 25px;
+}
+section #todo .delete-all {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+section #todo .delete-all .trash-all {
+  visibility: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  border-radius: 10px;
+  color: white;
+}
+section #todo .delete-all .trash-all img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+section #todo .delete-all .trash-all:hover img {
+  opacity: 100%;
+}
+section #todo ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section #todo ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 0.1px solid #ae81e7;
+  border-radius: 8px 8px 8px 8px;
+}
+section #todo ul li .container {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+section #todo ul li .container input[type=checkbox] {
+  -webkit-appearance: none;
+  font: inherit;
+  color: currentColor;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ae81e7;
+  border-radius: 0.15em;
+  display: grid;
+  place-content: center;
+  margin-left: 5px;
+  cursor: pointer;
+}
+section #todo ul li .container input[type=checkbox]::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: #ae81e7;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+section #todo ul li .container input[type=checkbox]:checked::before {
+  transform: scale(1);
+}
+section #todo ul li .todo-text {
+  color: rgba(100, 100, 100, 0.77);
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

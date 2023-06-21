@@ -1,0 +1,288 @@
+$primary: rgb(12, 112, 185);
+$light : #f9f9f9;
+$secondary : rgb(36, 153, 239);
+$box-shadow : 0 0 6px -1px rgba(114, 114, 114, 0.75);
+$input-bg : rgba(255, 255, 255, 0);
+$input-color : #3b3b3b;
+@import "../bootstrap/scss/bootstrap";
+
+
+//
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*header section*/
+
+header {
+  & {
+    height: 70px;
+  }
+
+  .search {
+     color: white;
+  }
+
+  .logo{
+    color: $secondary;
+    font-weight: bold;
+
+    &:hover {
+      color : rgba(36, 153, 239, 0.74);
+    }
+  }
+
+  .menu {
+    a {
+      border-top: 4px solid transparent;
+
+      &:hover {
+        color: $secondary;
+        border-top: 4px solid $secondary;
+      }
+    }
+  }
+}
+
+/*main section */
+
+.main {
+  height: calc(100vh - 70px);
+  background-image: url("../img/design.jpg");
+  background-position: center;
+  background-size: cover;
+
+  & > div {
+    color: white;
+  }
+}
+
+/*business section*/
+
+.business {
+
+  a:hover {
+      background-color: rgba(128, 128, 128, 0.46);
+  }
+
+  .business-text {
+    border-top: 1px solid rgba(128, 128, 128, 0.45);
+  }
+}
+
+/*title div*/
+
+.title {
+  h3 {
+    color: #3b3b3b;
+    letter-spacing: 5px;
+    font-size: 40px;
+    text-align: left;
+
+    &::after {
+      content: "";
+      margin-top: 15px;
+      display: block;
+      width: 40px;
+      border: 2px solid $secondary;
+    }
+  }
+}
+
+/*services section*/
+
+.service {
+  img {
+    height: 60px;
+  }
+
+  .service-text {
+    color: #3b3b3b;
+    margin-top: 10px;
+  }
+}
+
+/* portfolio section */
+
+.portfolio-menu {
+  height: 100%;
+
+  li {
+    background-color: white;
+
+    a {
+      color: black;
+    }
+
+    &:hover {
+      background-color: $secondary;
+
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+/*work info section */
+
+.work-info {
+
+  img {
+    height: 55px;
+    margin-bottom: 10px;
+  }
+}
+
+/*team section */
+
+.card {
+
+  .card-info{
+
+    p {
+      color: #3b3b3b;
+      font-size: 12px;
+    }
+
+    img {
+      height: 20px;
+      cursor: pointer;
+
+      &:hover {
+       opacity: 90%;
+      }
+    }
+  }
+}
+
+
+/* thinks section */
+
+#thinks {
+  padding: 40px 0;
+
+  .carousel-indicators {
+    bottom: -60px;
+
+    & [data-bs-target] {
+      width: 10px;
+      height: 10px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+
+  .staff-photo {
+    width: 80px;
+    height: 80px;
+    background-image: url("../img/staff.jpg");
+    background-size: cover;
+    background-position: 50% 30%;
+    border-radius: 50%;
+  }
+
+  .staff-name {
+    color: white;
+  }
+
+  .staff-type {
+    color: rgba(215, 215, 215, 0.75);
+    font-size: 13px;
+  }
+
+  .staff-info {
+    color: white;
+  }
+}
+
+/*stories section */
+
+#story {
+
+  .card-comments {
+    border-top: 0.4px solid rgba(128, 128, 128, 0.68);
+  }
+
+  .card-info {
+
+    p {
+      color: #3b3b3b;
+    }
+
+    .card-comments {
+
+      img {
+        width: 34px;
+        height: 34px;
+      }
+    }
+  }
+}
+
+/*contact section */
+
+#contact {
+
+  .contact-way {
+
+    a {
+      height: 40px;
+      width: 40px;
+      background-color: $secondary;
+    }
+  }
+
+  .contact-form {
+
+    input {
+      border: none;
+      border-bottom: 0.4px solid #3b3b3b;
+    }
+  }
+}
+
+/*footer section */
+
+footer {
+  border-top: 3px solid $secondary;
+  background-color: #333333;
+  color: rgba(255, 255, 255, 0.77);
+
+  .title {
+    margin-bottom: 30px;
+
+    h3{
+      color: white;
+      font-size: 20px;
+    }
+  }
+
+  .links, .posts {
+
+    a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.77);
+      margin-bottom: 6px;
+    }
+  }
+
+  .social-bar {
+
+    a {
+      margin-right: 5px;
+      padding: 7px 9px 9px 9px;
+      background-color: #2a2a2a;
+    }
+
+    img {
+      width: 16px;
+    }
+  }
+
+  .ending-info {
+    background-color: black;
+  }
+
+}

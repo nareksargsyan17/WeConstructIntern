@@ -1,0 +1,12 @@
+{
+  "name": "task4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch scss/style.scss style/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
