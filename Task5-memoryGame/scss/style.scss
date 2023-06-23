@@ -1,16 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+@keyframes shadow {
+  0% { box-shadow: none; }
+  50% { box-shadow: -2px 2px 17px 6px rgba(206, 206, 206, 1); }
+  100% { box-shadow: none; }
+}
+
+@keyframes money {
+  25% { transform: rotate(100deg) translateX(200px) translateY(-100px); }
+  50% { transform: rotate(-50deg) translateX(100px) translateY(100px); }
+  75% { transform: rotate(-50deg) translateX(150px) translateY(-100px); }
+  100%  { top: 200vh; }
+}
+
+.money {
+  position: absolute;
+  top: -10vh;
+  width: 50px;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+}
+
 section {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 50px;
+  background-image: url("../img/back.png");
 
-  div {
-    display: flex;
-    gap: 15px;
+  #conf-text {
+    visibility: hidden;
+    color: #ffffff;
+    font-weight: bold;
+    height: 40px;
   }
 
-  img {
-    width: 120px;
+  #start-modal {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #646464;
+    gap: 20px;
+    padding: 80px 40px;
+    background-color: rgba(3, 3, 3, 0.79);
+    animation-name: shadow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 15px;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    div {
+      padding: 10px 0;
+      border-radius: 10px;
+      font-size: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.49);
+      width: 100%;
+      cursor: pointer;
+      background-color: #ffffff;
+
+      &:hover {
+        box-shadow: 0 3px 15px 0 rgb(82, 82, 82);
+      }
+    }
+
+    .checked-div {
+      box-shadow: 0 3px 15px 0 rgba(206, 206, 206);
+      background-color: #646464;
+      color : white;
+    }
+  }
+
+
+  .start-btn {
+    color: white;
+    width: 100%;
+    background-color: #646464;
+    appearance: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 3px;
+    transition: all 1s;
+
+    &:hover {
+      background-color: white;
+      color: #646464;
+    }
+  }
+
+  #cards-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+
+    .cards-row {
+      display: flex;
+      gap: 50px;
+
+      div {
+        width: 120px;
+        height: 170px;
+        cursor: pointer;
+        box-shadow: -2px 2px 17px 6px rgba(152, 152, 152, 0.75);
+        background-image: url("../img/black.png");
+        background-size: cover;
+        background-position: center;
+        transform: translateY(-180deg);
+      }
+    }
+  }
+
+  #win-modal {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #ffffff;
+    padding: 80px 10px;
+    width: 500px;
+    background-color: rgba(3, 3, 3, 0.79);
+    box-shadow: 3px 3px 15px 0 rgba(255, 255, 255, 0.79);
+    gap: 40px;
+    letter-spacing: 5px;
+    display: none;
   }
 }

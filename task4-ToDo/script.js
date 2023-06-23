@@ -41,39 +41,4 @@ form.addEventListener('submit', (evt => {
     evt.target.reset();
 }))
 
-const trashAll = document.querySelector(".trash-all")
-let checkedCount = 0;
-todoList.addEventListener('click', (evt => {
-    if(evt.target.type === "checkbox"){
-        if(evt.target.checked) {
-            evt.target.parentElement.nextElementSibling.style.color = "#ae81e7"
-            checkedCount++;
-        }else {
-            evt.target.parentElement.nextElementSibling.style.color = "rgba(100, 100, 100, 0.77)";
-            checkedCount--;
-        }
-        console.log(checkedCount)
-        if(checkedCount >= 3){
-            trashAll.style.visibility = "visible";
-        }else{
-            trashAll.style.visibility = "hidden";
-        }
-    }
 
-    if (evt.target.nodeName === "BUTTON") {
-        evt.target.parentElement.remove();
-    }else if(evt.target.nodeName === "IMG"){
-        evt.target.parentElement.parentElement.remove();
-    }
-}))
-
-trashAll.addEventListener("click", ()=>{
-    const checkBoxes = document.querySelectorAll("input[type='checkbox']")
-    checkBoxes.forEach((el) =>{
-        if(el.checked){
-            checkedCount--;
-            el.parentElement.parentElement.remove();
-        }
-    })
-    trashAll.style.visibility = "hidden";
-})

@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/math.jpg");
+  background-size: cover;
+  background-position: center;
+  gap: 20px;
+}
+section .start-btn {
+  color: rgba(39, 28, 24, 0.93);
+  width: 100%;
+  background-color: #ffffff;
+  appearance: none;
+  border: 1px solid rgba(39, 28, 24, 0.93);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 3px;
+  box-shadow: 0 3px 15px 0 rgba(39, 28, 24, 0.93);
+  transition: all 1s;
+}
+section .start-btn:hover {
+  box-shadow: none;
+  background-color: rgba(39, 28, 24, 0.93);
+  color: #ffffff;
+}
+section #conf-text {
+  visibility: hidden;
+  color: rgba(39, 28, 24, 0.93);
+  font-weight: bold;
+  font-size: 30px;
+  background-color: white;
+  padding: 10px;
+  width: 600px;
+  border-radius: 15px;
+  border: 1px solid rgba(39, 28, 24, 0.93);
+  text-align: center;
+}
+section #modal {
+  width: 600px;
+  min-height: 30vh;
+  padding: 80px 40px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: -2px 2px 17px 6px rgb(44, 44, 44);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+section #modal #result-text {
+  color: rgba(39, 28, 24, 0.93);
+  font-size: 60px;
+  text-align: center;
+  display: none;
+  margin-bottom: 40px;
+}
+section #modal #answer-box {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: rgba(39, 28, 24, 0.93);
+  gap: 20px;
+}
+section #modal #answer-box h2 {
+  width: 100%;
+  padding: 20px 0;
+  background-color: rgba(39, 28, 24, 0.93);
+  font-size: 20px;
+  border-radius: 15px;
+  color: white;
+  margin-bottom: 50px;
+}
+section #modal #answer-box input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+}
+section #modal #start-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: rgba(39, 28, 24, 0.93);
+  gap: 20px;
+}
+section #modal #start-box h3 {
+  font-size: 20px;
+}
+section #modal #start-box div {
+  padding: 10px 0;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 100%;
+  cursor: pointer;
+  background-color: rgba(39, 28, 24, 0.93);
+  color: white;
+  letter-spacing: 3px;
+  border: 1px solid rgba(39, 28, 24, 0.93);
+}
+section #modal #start-box div:hover {
+  box-shadow: 0 3px 15px 0 rgba(39, 28, 24, 0.93);
+}
+section #modal #number-box {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 160px;
+  color: rgba(39, 28, 24, 0.93);
+}
+
+/*# sourceMappingURL=style.css.map */

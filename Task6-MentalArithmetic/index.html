@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mental Arithmetic</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <section>
+        <h2 id="conf-text">!</h2>
+        <div id="modal">
+            <div id="start-box">
+                <h3>Please select Your favorite level</h3>
+                <div data-speed = "500" data-level = "easy">EASY</div>
+                <div data-speed = "1000" data-level = "middle">MIDDLE</div>
+                <div data-speed = "1500" data-level = "hard">HARD</div>
+                <button class="start-btn">START</button>
+            </div>
+            <div id="number-box">
+                <h1 class="number"></h1>
+            </div>
+            <div id="answer-box">
+                <h2>What is Sum of numbers?</h2>
+                <input type="number" placeholder="Type here...">
+                <button class="start-btn">ANSWER</button>
+            </div>
+            <h1 id="result-text"></h1>
+            <button class="start-btn" id="start-again" style="display: none">START AGAIN</button>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>

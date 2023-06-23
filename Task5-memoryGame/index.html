@@ -2,15 +2,30 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ToDo Application</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
+    <div class="anim">
+    </div>
     <section>
-
+        <h2 id="conf-text"></h2>
+        <div id="start-modal">
+            <h3>Please select Your favorite option</h3>
+            <div data-x="4" data-y="3">4 X 3</div>
+            <div data-x="5" data-y="4">5 X 4</div>
+            <div data-x="6" data-y="4">6 X 4</div>
+            <button class="start-btn">START</button>
+        </div>
+        <div id="cards-box">
+            <div></div>
+        </div>
+        <div id="win-modal">
+            <h2>YOU WIN!!!!</h2>
+            <button class="start-btn">START AGAIN</button>
+        </div>
     </section>
 
-
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

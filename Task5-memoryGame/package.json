@@ -2,10 +2,11 @@
   "name": "task4",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
     "start": "sass --watch scss/style.scss style/style.css"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC"
