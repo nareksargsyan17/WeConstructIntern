@@ -15,7 +15,6 @@ section {
   flex-direction: column;
   height: 100vh;
   gap: 20px;
-  background-color: #ababab;
 
   #config {
     display: flex;
@@ -24,7 +23,8 @@ section {
     border: 1px solid #ababab;
 
 
-    .auto {
+
+    .option {
       padding: 10px 30px;
       display: flex;
       justify-content: center;
@@ -39,11 +39,10 @@ section {
         width: 40px;
       }
     }
-    .active-auto {
+    .active-conf {
       background-color: white;
       cursor: pointer;
     }
-
   }
 
   #carousel-box {
@@ -54,12 +53,12 @@ section {
     overflow: hidden;
 
     .carousel-item {
+      position: absolute;
       overflow: hidden;
       height: 100%;
       width: 800px;
-      display: none;
-      transition: all 0.6s ease-in;
-
+      transition: all 1s linear;
+      opacity: 0;
 
       img {
         width: 100%;
@@ -68,7 +67,7 @@ section {
     }
 
     .active {
-      display: block;
+      opacity: 100%;
     }
 
     .left {
@@ -102,6 +101,7 @@ section {
       color: rgba(255, 255, 255, 0.68);
       text-align: center;
       cursor: pointer;
+      transition: all 0.5s;
     }
   }
 }

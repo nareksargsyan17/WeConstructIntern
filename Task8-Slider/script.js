@@ -1,79 +1,67 @@
 const left = document.querySelector(".left");
 const right = document.querySelector(".right");
-const slideBox = document.querySelector("#carousel-box");
 const autoSlide = document.querySelector(".auto");
+const noTouch = document.querySelector(".arrow");
+const arrowBtns = document.querySelectorAll(".browse-btn");
 let activeIndex;
 let slides;
-function leftSlide() {
+function startSlide(way = "left") {
     slides = document.querySelectorAll(".carousel-item");
     slides.forEach((el, i) => {
         if (el.classList.contains("active")) {
             activeIndex = i;
         }
     })
-    if (activeIndex === 0) {
-        slideBox.prepend(slides[slides.length - 1]);
-        slides[slides.length - 1].style.marginLeft = `-100%`;
-        slides[slides.length - 1].classList.add("active");
-        slides[0].style.marginLeft = `0%`;
-
-        setTimeout(() => {
-            slides[slides.length - 1].style.marginLeft = "0"
-            slides[0].style.marginLeft = `100%`;
-            slides[0].classList.remove("active");
-
-
-        },100)
-        slides[0].style.marginLeft = `0`;
-
+    if (way === "right") {
+        if (activeIndex === slides.length - 1) {
+            activeIndex = 0;
+            slides[activeIndex].classList.toggle("active");
+            slides[slides.length - 1].classList.toggle("active");
+        } else {
+            slides[activeIndex+1].classList.toggle("active");
+            slides[activeIndex].classList.toggle("active");
+        }
     } else {
-        slides[activeIndex - 1].style.marginLeft = `-10%`;
-        slides[activeIndex-1].classList.add("active");
-        slides[activeIndex].style.marginLeft = `0%`;
-
-        setTimeout(() => {
-            slides[activeIndex - 1].style.marginLeft = "0"
-            slides[activeIndex].style.marginLeft = `100%`;
-        },100)
-        slides[activeIndex].classList.remove("active");
-        setTimeout(() => {
-        }, 4005)
-        slides[activeIndex].style.marginLeft = `0`;
-
+        if (activeIndex === 0) {
+            activeIndex = slides.length - 1;
+            slides[0].classList.toggle("active");
+            slides[activeIndex].classList.toggle("active");
+        } else {
+            slides[activeIndex-1].classList.toggle("active");
+            slides[activeIndex].classList.toggle("active");
+        }
     }
 }
 
 let interval;
 autoSlide.addEventListener("click", () => {
-    if (autoSlide.classList.contains("active-auto")) {
-        autoSlide.classList.toggle("active-auto");
+    if (autoSlide.classList.contains("active-conf")) {
+        autoSlide.classList.toggle("active-conf");
         clearInterval(interval);
     } else {
-        autoSlide.classList.toggle("active-auto");
+        autoSlide.classList.toggle("active-conf");
         interval = setInterval(() => {
-            leftSlide()
+            startSlide();
         }, 2000)
+    }
+})
+noTouch.addEventListener("click", () => {
+    if (noTouch.classList.contains("active-conf")) {
+        noTouch.classList.toggle("active-conf");
+        arrowBtns.forEach((btn) => {
+            btn.style.opacity = "1";
+        })
+    } else {
+        noTouch.classList.toggle("active-conf");
+        arrowBtns.forEach((btn) => {
+            btn.style.opacity = "0";
+        })
     }
 
 })
 left.addEventListener("click", () => {
-    setTimeout(() => {
-        leftSlide();
-    }, 100)
+    startSlide("left");
 })
 right.addEventListener("click", () => {
-    slides = document.querySelectorAll(".carousel-item");
-    slides.forEach((el, i) => {
-        if (el.classList.contains("active")) {
-            activeIndex = i;
-        }
-    })
-    if (activeIndex === slides.length - 1) {
-        slideBox.append(slides[0]);
-        slides[slides.length - 1].classList.toggle("active");
-        slides[0].classList.toggle("active");
-    } else {
-        slides[activeIndex+1].classList.toggle("active");
-        slides[activeIndex].classList.toggle("active");
-    }
+    startSlide("right");
 })

@@ -15,7 +15,6 @@ section {
   flex-direction: column;
   height: 100vh;
   gap: 20px;
-  background-color: #ababab;
 }
 section #config {
   display: flex;
@@ -23,20 +22,20 @@ section #config {
   width: 800px;
   border: 1px solid #ababab;
 }
-section #config .auto {
+section #config .option {
   padding: 10px 30px;
   display: flex;
   justify-content: center;
   transition: all 0.5s;
 }
-section #config .auto:hover {
+section #config .option:hover {
   background-color: rgba(255, 255, 255, 0.28);
   cursor: pointer;
 }
-section #config .auto img {
+section #config .option img {
   width: 40px;
 }
-section #config .active-auto {
+section #config .active-conf {
   background-color: white;
   cursor: pointer;
 }
@@ -48,18 +47,19 @@ section #carousel-box {
   overflow: hidden;
 }
 section #carousel-box .carousel-item {
+  position: absolute;
   overflow: hidden;
   height: 100%;
   width: 800px;
-  display: none;
-  transition: all 0.6s ease-in;
+  transition: all 1s linear;
+  opacity: 0;
 }
 section #carousel-box .carousel-item img {
   width: 100%;
   height: 100%;
 }
 section #carousel-box .active {
-  display: block;
+  opacity: 100%;
 }
 section #carousel-box .left {
   left: 0;
@@ -88,6 +88,7 @@ section #carousel-box .browse-btn {
   color: rgba(255, 255, 255, 0.68);
   text-align: center;
   cursor: pointer;
+  transition: all 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

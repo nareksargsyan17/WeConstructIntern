@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20vh;
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid #ae81e7;
+  box-shadow: 0 0 6px -1px #ae81e7;
+  background-color: rgba(242, 236, 253, 0.1);
+  min-width: 600px;
+}
+
+h2 {
+  color: #ae81e7;
+  font-size: 50px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.todo-input {
+  width: 100%;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #ae81e7;
+  color: rgba(16, 16, 16, 0.78);
+  transition: width 1s ease;
+  padding-left: 8px;
+}
+
+.todo-input:focus {
+   outline: none;
+   border: 2px solid #ae81e7;
+ }
+
+.todo-button {
+  padding: 15px;
+  background-color: #ae81e7;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  transition: width 1s ease;
+  border: none;
+  color: white;
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 0.1px solid #ae81e7;
+  border-radius: 8px 8px 8px 8px;
+  width: 100%;
+}
+
+.del {
+  padding: 15px 10px;
+  background-color: #ae81e7;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  border: none;
+  color: white;
+}
+
+
+.label {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  font: inherit;
+  color: currentColor;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ae81e7;
+  border-radius: 0.15em;
+  display: grid;
+  place-content: center;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  /*box-shadow: inset 1em 1em var(--form-control-color);*/
+  background-color: #ae81e7;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.todo-text {
+  color: rgba(100, 100, 100, 0.77);
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+}

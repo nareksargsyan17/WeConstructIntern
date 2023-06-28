@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: sans-serif;
+}
+
+
+#box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    margin: 100px;
+    border: 1px solid #ae81e7;
+    box-shadow: 0 0 6px -1px #ae81e7;
+    background-color: rgba(242, 236, 253, 0.1);
+    min-width: 90vw;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 100%;
+
+
+}
+
+#main-nav > li {
+    padding: 10px;
+}
+
+
+
+tr > * {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #ae81e7;
+}
+
+tr > th {
+    padding: 15px;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    padding: 0 5px;
+}
+
+td > button {
+    width: 30%;
+    padding: 15px 20px;
+    border: 3px solid white;
+    color: white;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+
+.edit {
+    background-color: #ae81e7;
+}
+
+.remove {
+    background-color: rgba(238, 53, 53, 0.87);
+}
+
+.active {
+    background-color: #6316c5;
+}
+
+.active-input {
+    background-color: rgba(174, 129, 231, 0.34);
+}
+
+td > button:hover {
+    opacity: 80%;
+}
+
+.add-user {
+    position: absolute;
+    right: 10px;
+    top: -30px;
+    padding: 15px 30px;
+    border: none;
+    background-color: #ae81e7;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 1s;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.add-user > span {
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 50%;
+    transition: all 1s;
+}
+
+.add-user:hover {
+    background-color: #6316c5;
+}
+
+.add-user:hover > span {
+    opacity: 100%;
+}

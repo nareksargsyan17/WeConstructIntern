@@ -110,32 +110,6 @@ section {
       }
     }
 
-    .delete-all {
-      width: 100%;
-      display: flex;
-      justify-content: end;
-
-      .trash-all {
-        visibility: hidden;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 5px;
-        border-radius: 10px;
-        color: white;
-
-        img {
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
-
-        &:hover {
-          img{
-            opacity: 100%;
-          }
-        }
-      }
-    }
 
     ul {
       width: 100%;

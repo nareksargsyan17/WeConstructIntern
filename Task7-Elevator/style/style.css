@@ -39,7 +39,9 @@ section .floor-buttons-box .floor-button {
 }
 section .floor-buttons-box .floor-button:hover {
   border: 1px solid #f38b8b;
-  color: #f38b8b;
+}
+section .floor-buttons-box .change-color {
+  background-color: #f38b8b;
 }
 section .floor-box {
   display: flex;
@@ -50,7 +52,6 @@ section .floor-box {
 section .floor-box .floor {
   width: 180px;
   height: 8vh;
-  background-color: #646464;
   display: flex;
   justify-content: center;
   background-image: url("../img/floor.jpg");
@@ -67,19 +68,20 @@ section .floor-box .floor .call {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #777777;
+  background-color: rgb(119, 119, 119);
   border: 1px solid white;
   cursor: pointer;
   color: white;
   font-size: 10px;
 }
-section .floor-box .floor .call:hover {
+section .floor-box .floor .change-color {
   background-color: #f38b8b;
 }
 section .floor-box .floor .floor-buttons {
   position: absolute;
   right: -50px;
   display: flex;
+  background-color: rgb(119, 119, 119);
 }
 section .floor-box .floor .elevator {
   width: 40px;
