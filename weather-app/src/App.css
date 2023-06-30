@@ -1,38 +1,263 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+    overflow: hidden;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    height: 100vh;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 60%;
+    background-color: white;
+    padding: 0 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #484848;
+    padding: 30px 50px;
+    position: relative;
+    top: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.favorites {
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar > input {
+    padding: 10px;
+    outline: none;
+    border-radius: 6px 0 0 6px;
+    border: none;
 }
+
+.search-bar > button {
+    padding: 10px;
+    background-color: #ff6e30;
+    border: none;
+    color: white;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.search-bar > button:hover {
+    background-color: rgba(255, 110, 48, 0.85);
+    color: black;
+}
+
+#weather-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 90px;
+    height: 100%;
+    width: 100%;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #ff6e30;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+
+#heart {
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    margin-top: 5px;
+    right: -50px;
+    top: -20px;
+}
+
+#heart::before, #heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 15px;
+    border-radius: 50px 50px 0 0;
+    background: #ffc2ac;
+    cursor: pointer;
+}
+
+#heart:hover::before, #heart:hover::after {
+    background-color: #ff6e30;
+}
+
+#heart::before {
+    left: 10px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+#heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+#weather-info {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 600px;
+    position: relative;
+}
+
+.full-day {
+    color: #fd986e;
+    font-size: 16px;
+}
+
+.header-info {
+    margin-bottom: 15px;
+}
+
+.sec-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+.sec-info > span > *{
+    margin-right: 4px;
+}
+
+.temp {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    gap: 20px;
+}
+
+.temp > img {
+    width: 80px;
+}
+
+.weather-5days {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 600px;
+}
+
+.day-box {
+    width: 100%;
+}
+
+.day-row {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.day-row:hover {
+    background-color: #c4c4c4;
+}
+
+.day-row > li {
+    display: flex;
+    align-items: center;
+}
+
+.weather-desc {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+}
+
+.hours-box {
+    list-style-type: none;
+    padding: 0 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(232, 232, 232, 0.38);
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hours-box:hover {
+    background-color: #c4c4c4;
+}
+
+.hours-box > li {
+    display: flex;
+    align-items: center;
+}
+
